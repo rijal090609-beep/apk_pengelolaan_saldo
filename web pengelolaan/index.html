@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Finance App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>💰 Finance App</h1>
+
+    <!-- Budget -->
+    <div class="box">
+        <h3>Budget Bulanan</h3>
+        <input type="number" id="budget" placeholder="Masukkan budget">
+        <button onclick="setBudget()">Simpan</button>
+    </div>
+
+    <!-- Pengeluaran -->
+    <div class="box">
+        <h3>Tambah Pengeluaran</h3>
+        <input type="text" id="nama" placeholder="Contoh: Makan">
+        <input type="number" id="jumlah" placeholder="Jumlah">
+        <button onclick="tambah()">Tambah</button>
+    </div>
+
+    <!-- Target Tabungan -->
+    <div class="box">
+        <h3>Target Tabungan</h3>
+        <input type="number" id="target" placeholder="Target tabungan">
+        <button onclick="setTarget()">Set Target</button>
+    </div>
+
+    <!-- Hasil -->
+    <div class="result">
+        <p>Total: Rp <span id="total"></span></p>
+        <p>Terpakai: Rp <span id="pakai"></span></p>
+        <p>Sisa: Rp <span id="sisa"></span></p>
+        <p>Tabungan: Rp <span id="tabungan"></span></p>
+    </div>
+
+    <!-- Progress -->
+    <div class="progress-bar">
+        <div id="progress"></div>
+    </div>
+
+    <!-- Grafik -->
+    <canvas id="chart"></canvas>
+
+    <!-- List -->
+    <ul id="list"></ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
